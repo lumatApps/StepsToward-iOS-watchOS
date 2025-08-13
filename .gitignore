@@ -1,62 +1,85 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# ---------------------------
+# iOS / Xcode / Swift / SwiftUI
+# ---------------------------
+# Keep these under version control: *.xcodeproj, *.xcworkspace, shared schemes,
+# and Package.resolved (for reproducible builds).
 
-## User settings
-xcuserdata/
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+.Trashes
+._*
 
-## Obj-C/Swift specific
-*.hmap
+# Xcode build + user-specific
+DerivedData/
+build/
+*.xccheckout
+*.xcuserstate
+*.moved-aside
+*.xcscmblueprint
 
-## App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
+# Xcode workspace/project user data (keep shared schemes)
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
 
-## Playgrounds
+# Test/coverage artifacts
+*.xcresult
+*.xccoverage
+
+# Swift Package Manager
+.build/
+.swiftpm/
+!Package.resolved
+!**/*.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
+# Playgrounds (keep sources, ignore local timeline/workspace noise)
 timeline.xctimeline
 playground.xcworkspace
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+# CocoaPods (optional: comment out if you commit Pods)
+Pods/
+# Keep lockfile for reproducible installs
+!Podfile.lock
 
-.build/
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+# Carthage (optional)
 Carthage/Build/
+Carthage/Checkouts/
+# Keep resolved for reproducibility
+!Cartfile.resolved
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
+# Accio (optional)
+.accio/
+Dependencies/
 
+# Fastlane
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
-fastlane/test_output
+fastlane/test_output/
+
+# Signing & provisioning (never commit secrets)
+*.mobileprovision
+*.provisionprofile
+*.cer
+*.p12
+*.p8
+
+# Archives / artifacts
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.xcarchive
+
+# LSP / tooling caches
+.sourcekit-lsp/
+
+# Tuist (optional)
+Tuist/Dependencies/
+Tuist/Cache/
+
+# IDEs/editors
+.vscode/
+.idea/
