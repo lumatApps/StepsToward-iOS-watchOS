@@ -83,3 +83,8 @@ Tuist/Cache/
 # IDEs/editors
 .vscode/
 .idea/
+Steps Toward/GoogleService-Info.plist
+
+
+# Ignore all GoogleService-Info.plist files anywhere
+**/GoogleService-Info.plist
